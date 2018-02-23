@@ -25,11 +25,13 @@ To do so on Ubuntu, you may need to add deb http://cz.archive.ubuntu.com/ubuntu 
 Check styles for all files with
 ```cd papers
 cp ../checkAISTATSpaper.py .
-for filename in *.pdf ; do echo $filename; python checkAISTATSpaper.py $filename ; done | tee -a log_checker```
+for filename in *.pdf ; do echo $filename; python checkAISTATSpaper.py $filename ; done | tee -a log_checker
+```
 
 This will save your output to `log_checker` while also displaying it to screen.
 
 Process the output of this file:
 ```
 cd ..
-python process_log_checker.py papers/log_checker papers papers_ok papers_notok crdict.pickle```
+python process_log_checker.py papers/log_checker papers papers_ok papers_notok crdict.pickle
+```
